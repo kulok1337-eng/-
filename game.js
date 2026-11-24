@@ -1963,7 +1963,7 @@
       cell.className = 'jar-cell' + (i < profile.jar ? ' full' : '');
       if (i < profile.jar) {
         var img = document.createElement('img');
-        img.src = 'classic.png?v=2';
+        img.src = 'classic.png?v=3';
         img.alt = '';
         cell.appendChild(img);
       }

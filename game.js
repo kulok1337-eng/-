@@ -751,21 +751,6 @@
     c.rotate(style.tilt);
     c.translate(-cx, -cy);
 
-    // --- Портальный след под летящим огурчиком ---
-    if (opts.beam) {
-      c.save();
-      c.globalAlpha = 0.5;
-      c.strokeStyle = '#7fb84a';
-      c.lineWidth = 2;
-      // Три расходящихся дуги — компактный портальный намёк
-      for (var bi = 1; bi <= 3; bi++) {
-        c.globalAlpha = 0.3 / bi;
-        c.beginPath();
-        c.ellipse(cx, y + h + 6 + bi * 5, w * 0.26 * bi * 0.7, 3 * bi, 0, 0, Math.PI * 2);
-        c.stroke();
-      }
-      c.restore();
-    }
 
     // --- Хвостик от плодоножки ---
     if (style.hasStem && h > 26) {
@@ -1713,7 +1698,7 @@
       var m = game.moving;
       var my = worldToScreenY(m.y + game.blockH);
 
-      drawDevice(m.x, my, m.w, game.blockH, m.style, { glow: 16, beam: true });
+      drawDevice(m.x, my, m.w, game.blockH, m.style, { glow: 16 });
     }
 
     // --- Обломки ---

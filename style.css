@@ -873,3 +873,29 @@ body.night .jar-pop-text { background: #26394c; color: #cdf3b0; text-shadow: non
   60%  { transform: translate(-50%, -6px) rotate(-2deg); }
   100% { transform: translate(-50%, 0) rotate(0deg); }
 }
+
+/* ---------- усиленная ночная тема (перекрываем белые плашки) ---------- */
+body.night .skin-strip,
+body.night .skin-current,
+body.night .board-row,
+body.night .result-card,
+body.night .jar-cell,
+body.night .task-row,
+body.night .skin-card {
+  background: #2a3f52 !important;
+  border-color: #0e1a24 !important;
+  color: #e9f2f8 !important;
+}
+body.night .board-row.me { background: #2f4a3a !important; border-color: var(--portal) !important; }
+body.night .skin-strip-name,
+body.night .skin-current-name,
+body.night .board-name,
+body.night .result-value,
+body.night .skin-card-name,
+body.night .task-head { color: #e9f2f8 !important; }
+body.night .board-rank,
+body.night .result-label,
+body.night .skin-strip-label,
+body.night .skin-current-label { color: #9fb6c6 !important; }
+body.night .board-score { color: #8fd45a !important; }
+body.night .task-bar { background: #1b2b39 !important; }
